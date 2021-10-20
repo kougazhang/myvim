@@ -38,9 +38,6 @@ map <F1> :NERDTreeToggle<CR>
 let mapleader=","
 let g:NERDSpaceDelims = 1
 
-" 回车时以 new tab 的形式打开文件
-let NERDTreeMapOpenInTab='<ENTER>'
-
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 
