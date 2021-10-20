@@ -13,6 +13,9 @@ set ignorecase
 set incsearch  " increase search function. make it work immediately
 set laststatus=2
 set nocompatible                                                                                                                                                                         
+" Vim 中 copy 的内容保存到剪贴板, 仅 Mac 生效.
+set clipboard=unnamed
+
 "set nohls  " close hightlight after search
 set nu
 set shiftwidth=4
