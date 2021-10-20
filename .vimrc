@@ -12,7 +12,12 @@ set hlsearch
 set ignorecase
 set incsearch  " increase search function. make it work immediately
 set laststatus=2
-set nocompatible                                                                                                                                                                         
+set nocompatible                   
+
+" 标签页跳转快捷键
+noremap <C-L> <Esc>:tabnext<CR>
+noremap <C-H> <Esc>:tabprevious<CR>
+
 " Vim 中 copy 的内容保存到剪贴板, 仅 Mac 生效.
 set clipboard=unnamed
 
@@ -32,6 +37,9 @@ map <F1> :NERDTreeToggle<CR>
 " Add spaces after comment delimiters by default
 let mapleader=","
 let g:NERDSpaceDelims = 1
+
+" 回车时以 new tab 的形式打开文件
+let NERDTreeMapOpenInTab='<ENTER>'
 
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
