@@ -105,3 +105,12 @@ let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#fnametruncate = 16
 let g:airline#extensions#tabline#fnamecollapse = 2
 let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+augroup templates
+  au!
+  " read in template files
+  autocmd BufNewFile *.md 0r $HOME/.vim/template/markdown.md
+  
+  " parse special text in the templates after the read
+  autocmd BufNewFile * %substitute#\[:VIM_EVAL:\]\(.\{-\}\)\[:END_EVAL:\]#\=eval(submatch(1))#ge
+augroup END
