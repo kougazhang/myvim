@@ -31,6 +31,12 @@ set tabstop=4
 syntax on
 
 " Function to rename the variable under the cursor
+" Call it with :call Rename()
+" expand("<cword>") gets the word under the cursor. 
+" The search string uses % for file-scope, 
+" and the \(\W\) patterns look for non-word characters 
+" at the boundary of the word to replace, 
+" and save them in variables \1 and \2 so as to be re-inserted in the replacement pattern.
 function! Rename()
   let word_to_replace = expand("<cword>")
   let replacement = input("new name: ")
